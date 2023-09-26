@@ -93,3 +93,7 @@ remove-target-file:
 # This is a workaround to allow passing arguments to Make targets
 %:
 	@:
+include ~/.Makefiles/pre-commit/Makefile
+.PHONY: pre-commit
+include ~/.Makefiles/git/Makefile
+.PHONY: push prdev pr branch branch-obsolete
