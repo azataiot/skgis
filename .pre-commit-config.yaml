@@ -39,6 +39,20 @@ repos:
         args: [ '--ignore=E501', '--fix' ]
 
 
+  - repo: https://github.com/adamchainz/django-upgrade
+    rev: '1.14.1'
+    hooks:
+      - id: django-upgrade
+        args: [ '--target-version', '4.2' ]
+
+
+  - repo: https://github.com/Riverside-Healthcare/djLint
+    rev: v1.32.1
+    hooks:
+      - id: djlint-reformat-django
+      - id: djlint-django
+
+
   - repo: https://github.com/asottile/pyupgrade
     rev: v3.10.1
     hooks:
